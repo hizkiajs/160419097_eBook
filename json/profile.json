@@ -1,0 +1,26 @@
+[
+    {
+        "id": "1",
+        "nama": "Hizkia Joko Susanto",
+        "tanggalLahir": "12-11-2000",
+        "jenisKelamin": "Pria",
+        "email": "s160419097@student.ubaya.ac.id",
+        "noHP": "082236787460"
+    },
+    {
+        "id": "2",
+        "nama": "John Steven",
+        "tanggalLahir": "20-10-2000",
+        "jenisKelamin": "Pria",
+        "email": "hizkiajs17@gmail.com",
+        "noHP": "081234567890"
+    },
+    {
+        "id": "3",
+        "nama": "Rut Sharon Lita Wilujeng",
+        "tanggalLahir": "23-03-2006",
+        "jenisKelamin": "Perempuan",
+        "email": "rutsharonlita@gmail.com",
+        "noHP": "082298765432"
+    }
+]

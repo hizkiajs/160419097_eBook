@@ -1,0 +1,35 @@
+[
+    {
+        "id": "1",
+        "nama": "The Placenta, From Development to Disease",
+        "editor": "Helen H. Kay MD, \nD. Michael Nelson MD, PhD, \nYuping Wang MD, PhD,",
+        "publish": "21 March 2011",
+        "copyright": "2011",
+        "about": "The Placenta: From Development to Disease is ideal for both experienced clinicians and researchers and those new to the field. Anyone who needs to understand the central importance of the placenta in the well being of their maternal and fetal patients should read this book.",
+        "author_bios": "Department of Obstetrics and Gynecology, Washington University School of Medicine, St. Louis, MO, USA \nDepartment of Obstetrics and Gynecology, Washington University School of Medicine, St. Louis, MO, USA \nDepartments of Obstetrics and Gynecology, and Molecular and Cellular Physiology, Louisiana State University Health Sciences Center - Shreveport, Shreveport, LA, USA",
+        "review": "\"At a time when there is so much overlap in the realm of medical books, this one stands out as a unique and worthwhile contribution to the field. From the clarity of its layout to its detailed descriptions to its in-depth illustrations, it is a great reference for anyone interested in the physiology of pregnancy.\" (Doody's, 19 August 2011)",
+        "photo": "https://cdn.discordapp.com/attachments/942397799205572608/958378712850661416/34370240-d-nelson-michael-the-placenta-from-development-to-disease-34370240.png"
+    },
+    {
+        "id": "2",
+        "nama": "Protocols for High-Risk Pregnancies: An Evidence-Based Approach, Fifth Edition",
+        "editor": "John T. Queenan MD, \nJohn C. Hobbins MD, \nCatherine Y. Spong MD,",
+        "publish": "18 June 2010",
+        "copyright": "2010",
+        "about": "To enhance clinical relevance, each protocol is written as if the patient were present. Evidence to support an intervention is given where it exists. The authors' experience provides additional wise counsel. Key references provide the springboard for a deeper understanding of a topic.  All protocols have been updated. New protocols follow the successful formula of previous editions.",
+        "author_bios": "Professor and Chairman Emeritus, Department of Obstetrics & Gynecology, Georgetown University School of Medicine, Washington, DC \nProfessor of Obstetrics, Department of Obstetrics and Gynecology, University of Colorado Health Sciences Center, Denver, CO \nBethesda, MD",
+        "review": "\"This is an update of an excellent reference. The evidence-based algorithms are essential for clinical practice in medicine today.\" (Doody's, 30 September 2011)",
+        "photo": "https://cdn.discordapp.com/attachments/942397799205572608/958380424332197938/Yksek___Riskli_Gebelik_Protokolleri59b58d764d17a.png"
+    },
+    {
+        "id": "3",
+        "nama": "Manual for Eye Examination and Diagnosis, Ninth Edition",
+        "editor": "Mark W. Leitman MD",
+        "publish": "6 May 2016",
+        "copyright": "2017",
+        "about": "Manual for Eye Examination and Diagnosis, 9th edition is a classic guide that provides a thorough update to basic eye examination techniques and the use of instruments and major ophthalmic disorders. Its popular approach takes the reader through the eye exam, covering anatomy, differential diagnosis, and treatment. \nLavishly illustrated with over 550 color and black and white images, this accessible introductory text is designed for students who need a concise and thorough introduction to this complex and ever-changing specialty. \nStudents and trainees across the healthcare professions will welcome the practical approach which focuses on the most commonly encountered eye diseases, their examination and treatment.",
+        "author_bios": "Chairman, Department of Ophthalmology, University Surgicenter, East Brunswick, New Jersey, USA",
+        "review": "“Written for health professionals and students, this short, well-illustrated manual, now in its 8th edition, offers a concise introduction to eye diagnosis and treatment.” (Chironian, 1 October 2011)",
+        "photo": "https://cdn.discordapp.com/attachments/942397799205572608/958777299510100068/64787825-mark-w-leitman-29753250-manual-for-eye-examination-and-diagnosis-64787825.png"
+    }
+]
