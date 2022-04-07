@@ -35,7 +35,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
-        android:text="Editor(s) : "
+        android:text="Editor(s): "
         app:layout_constraintStart_toStartOf="@+id/txtJudul"
         app:layout_constraintTop_toBottomOf="@+id/txtJudul" />
 
@@ -54,7 +54,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
-        android:text="First Publish : "
+        android:text="First Publish: "
         app:layout_constraintStart_toStartOf="@+id/textView1"
         app:layout_constraintTop_toBottomOf="@+id/txtEditor" />
 
@@ -73,7 +73,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
-        android:text="Copyright : "
+        android:text="Copyright: "
         app:layout_constraintStart_toStartOf="@+id/textView2"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
 

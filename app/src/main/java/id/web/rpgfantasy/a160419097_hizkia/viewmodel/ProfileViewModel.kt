@@ -24,7 +24,7 @@ class ProfileViewModel(application: Application) :AndroidViewModel(application) 
 
     fun fetch() {
         queue = Volley.newRequestQueue(getApplication())
-        var url = "https://gist.githubusercontent.com/hizkiajs/888afdc8eb44a80b5371c46d8c8f819b/raw/045de9eb59a15c71ce4d61a61d71dfad577e085c/profile.json"
+        var url = "https://gist.githubusercontent.com/hizkiajs/888afdc8eb44a80b5371c46d8c8f819b/raw/9118c0781367388442a9e9976e37394cc17354be/profile.json"
 
         val stringRequest = StringRequest(
             Request.Method.GET, url,

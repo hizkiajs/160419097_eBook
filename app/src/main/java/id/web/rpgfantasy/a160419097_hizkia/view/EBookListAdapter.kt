@@ -27,9 +27,7 @@ class EBookListAdapter(val eBookList:ArrayList<EBook>, val current: String):
             txtIDEBookList.text = eBook.id.toString()
             txtNameEBookList.text = eBook.nama.toString()
 
-
-
-            btnDetailEBookList.setOnClickListener {
+            cardView.setOnClickListener{
                 var action: NavDirections
                 if (current == "eBooklist"){
                     action = EBookListFragmentDirections.actionEBookListFragmentToEBookDetailFragment(eBook.id.toString())
@@ -39,6 +37,17 @@ class EBookListAdapter(val eBookList:ArrayList<EBook>, val current: String):
                 }
                 Navigation.findNavController(it).navigate(action)
             }
+
+            /*btnDetailEBookList.setOnClickListener {
+                var action: NavDirections
+                if (current == "eBooklist"){
+                    action = EBookListFragmentDirections.actionEBookListFragmentToEBookDetailFragment(eBook.id.toString())
+                }
+                else {
+                    action = FavEBookFragmentDirections.actionItemFavToEBookDetailFragment(eBook.id.toString())
+                }
+                Navigation.findNavController(it).navigate(action)
+            }*/
             imgEBookListPhoto.loadImage(eBook.photo, progressLoadingeBookPhoto)
         }
     }
