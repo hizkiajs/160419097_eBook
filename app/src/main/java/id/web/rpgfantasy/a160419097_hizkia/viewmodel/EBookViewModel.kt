@@ -10,10 +10,11 @@ import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
+import id.web.rpgfantasy.a160419097_hizkia.model.EBook
 import id.web.rpgfantasy.a160419097_hizkia.model.Profile
 
 class EBookViewModel(application: Application) :AndroidViewModel(application) {
-    val eBooksLiveData = MutableLiveData<ArrayList<Profile>>()
+    val eBooksLiveData = MutableLiveData<ArrayList<EBook>>()
     val eBooksLoadErrorLiveData = MutableLiveData<Boolean>()
     val loadingLiveData = MutableLiveData<Boolean>()
 
@@ -30,13 +31,13 @@ class EBookViewModel(application: Application) :AndroidViewModel(application) {
         loadingLiveData.value = true
 
         queue = Volley.newRequestQueue(getApplication())
-        var url = "https://gist.githubusercontent.com/hizkiajs/888afdc8eb44a80b5371c46d8c8f819b/raw/660c192b80589d4f2447e290eaa630c13bddbe51/profile.json"
+        var url = "https://gist.githubusercontent.com/hizkiajs/510dfb99e307ec5bf1cdfc5c5923d032/raw/ba572f14b082ec4287fa3fd030daf110f4ffb02a/ebook.json"
 
         val stringRequest = StringRequest(
             Request.Method.GET, url,
             { response ->
-                val sType = object : TypeToken<ArrayList<Profile>>() { }.type
-                val result = Gson().fromJson<ArrayList<Profile>>(response, sType)
+                val sType = object : TypeToken<ArrayList<EBook>>() { }.type
+                val result = Gson().fromJson<ArrayList<EBook>>(response, sType)
                 eBooksLiveData.value = result
                 loadingLiveData.value = false
                 Log.d("showvolley", response.toString())

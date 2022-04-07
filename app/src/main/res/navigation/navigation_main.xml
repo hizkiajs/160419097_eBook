@@ -11,20 +11,8 @@
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" >
         <action
-            android:id="@+id/action_homeFragment_to_EBookListFragment"
-            app:destination="@id/EBookListFragment"
-            app:popUpTo="@id/itemHome"
-            app:popUpToInclusive="true" />
-        <action
-            android:id="@+id/action_itemHome_to_profileFragment"
-            app:destination="@id/itemProfile"
-            app:popUpTo="@id/itemHome"
-            app:popUpToInclusive="true" />
-        <action
-            android:id="@+id/action_itemHome_to_favEBookFragment"
-            app:destination="@id/itemFav"
-            app:popUpTo="@id/itemHome"
-            app:popUpToInclusive="true" />
+            android:id="@+id/action_itemHome_to_EBookListFragment"
+            app:destination="@id/EBookListFragment" />
     </fragment>
     <fragment
         android:id="@+id/EBookListFragment"
@@ -33,8 +21,11 @@
         tools:layout="@layout/fragment_e_book_list" >
         <action
             android:id="@+id/action_EBookListFragment_to_EBookDetailFragment"
-            app:destination="@id/EBookDetailFragment"
-            app:popUpTo="@id/EBookListFragment"
+            app:destination="@id/EBookDetailFragment" />
+        <action
+            android:id="@+id/action_EBookListFragment_to_itemHome"
+            app:destination="@id/itemHome"
+            app:popUpTo="@id/itemHome"
             app:popUpToInclusive="true" />
     </fragment>
     <fragment
@@ -49,15 +40,18 @@
         tools:layout="@layout/fragment_profile" >
         <action
             android:id="@+id/action_profileFragment_to_profileDetailFragment"
-            app:destination="@id/profileDetailFragment"
-            app:popUpTo="@id/itemProfile"
-            app:popUpToInclusive="true" />
+            app:destination="@id/profileDetailFragment" />
     </fragment>
     <fragment
         android:id="@+id/profileDetailFragment"
         android:name="id.web.rpgfantasy.a160419097_hizkia.view.ProfileDetailFragment"
         android:label="fragment_profile_detail"
-        tools:layout="@layout/fragment_profile_detail" />
+        tools:layout="@layout/fragment_profile_detail" >
+        <action
+            android:id="@+id/action_profileDetailFragment_to_itemProfile"
+            app:destination="@id/itemProfile"
+            app:popUpTo="@id/itemProfile" />
+    </fragment>
     <fragment
         android:id="@+id/EBookDetailFragment"
         android:name="id.web.rpgfantasy.a160419097_hizkia.view.EBookDetailFragment"
@@ -65,33 +59,58 @@
         tools:layout="@layout/fragment_e_book_detail" >
         <action
             android:id="@+id/action_EBookDetailFragment_to_aboutEBookFragment"
-            app:destination="@id/aboutEBookFragment"
-            app:popUpTo="@id/EBookDetailFragment"
-            app:popUpToInclusive="true" />
+            app:destination="@id/aboutEBookFragment" />
         <action
             android:id="@+id/action_EBookDetailFragment_to_authorEBookFragment"
-            app:destination="@id/authorEBookFragment"
-            app:popUpTo="@id/EBookDetailFragment"
-            app:popUpToInclusive="true" />
+            app:destination="@id/authorEBookFragment" />
         <action
             android:id="@+id/action_EBookDetailFragment_to_reviewEBookFragment"
-            app:destination="@id/reviewEBookFragment"
-            app:popUpTo="@id/EBookDetailFragment"
-            app:popUpToInclusive="true" />
+            app:destination="@id/reviewEBookFragment" />
+        <argument
+            android:name="idEBook"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_EBookDetailFragment_to_EBookListFragment"
+            app:destination="@id/EBookListFragment"
+            app:popUpTo="@id/EBookListFragment" />
     </fragment>
     <fragment
         android:id="@+id/aboutEBookFragment"
         android:name="id.web.rpgfantasy.a160419097_hizkia.view.AboutEBookFragment"
         android:label="fragment_about_e_book"
-        tools:layout="@layout/fragment_about_e_book" />
+        tools:layout="@layout/fragment_about_e_book" >
+        <action
+            android:id="@+id/action_aboutEBookFragment_to_EBookDetailFragment"
+            app:destination="@id/EBookDetailFragment"
+            app:popUpTo="@id/EBookDetailFragment" />
+        <argument
+            android:name="idEBook"
+            app:argType="string" />
+    </fragment>
     <fragment
         android:id="@+id/authorEBookFragment"
         android:name="id.web.rpgfantasy.a160419097_hizkia.view.AuthorEBookFragment"
         android:label="fragment_author_e_book"
-        tools:layout="@layout/fragment_author_e_book" />
+        tools:layout="@layout/fragment_author_e_book" >
+        <action
+            android:id="@+id/action_authorEBookFragment_to_EBookDetailFragment"
+            app:destination="@id/EBookDetailFragment"
+            app:popUpTo="@id/EBookDetailFragment" />
+        <argument
+            android:name="idEBook"
+            app:argType="string" />
+    </fragment>
     <fragment
         android:id="@+id/reviewEBookFragment"
         android:name="id.web.rpgfantasy.a160419097_hizkia.view.ReviewEBookFragment"
         android:label="fragment_review_e_book"
-        tools:layout="@layout/fragment_review_e_book" />
+        tools:layout="@layout/fragment_review_e_book" >
+        <action
+            android:id="@+id/action_reviewEBookFragment_to_EBookDetailFragment"
+            app:destination="@id/EBookDetailFragment"
+            app:popUpTo="@id/EBookDetailFragment" />
+        <argument
+            android:name="idEBook"
+            app:argType="string" />
+    </fragment>
 </navigation>

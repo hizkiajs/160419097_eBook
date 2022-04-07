@@ -16,7 +16,6 @@ data class EBook(var id: String?,
                  var publish: String?,
                  var copyright: String?,
                  var about: String?,
-                 @SerializedName("authorBios")
                  var author_bios: String?,
                  var review: String?,
                  var photo: String?)
