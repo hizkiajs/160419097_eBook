@@ -2,6 +2,7 @@ package id.web.rpgfantasy.a160419097_hizkia.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
@@ -22,9 +23,28 @@ class MainActivity : AppCompatActivity() {
         NavigationUI.setupActionBarWithNavController(this, navController, drawerLayout)
         NavigationUI.setupWithNavController(navView, navController)
         bottomNav.setupWithNavController(navController)
+
+        navController.addOnDestinationChangedListener { _, destination, _->
+            when (destination.id) {
+                R.id.itemHome -> showBottomNav()
+                R.id.itemFav -> showBottomNav()
+                R.id.itemProfile -> showBottomNav()
+                else -> hideBottomNav()
+            }
+        }
     }
 
     override fun onSupportNavigateUp(): Boolean {
         return navController.navigateUp(drawerLayout) || super.onSupportNavigateUp()
+    }
+
+    private fun showBottomNav() {
+        bottomNav.visibility = View.VISIBLE
+
+    }
+
+    private fun hideBottomNav() {
+        bottomNav.visibility = View.GONE
+
     }
 }
