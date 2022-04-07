@@ -22,7 +22,7 @@ import kotlinx.android.synthetic.main.fragment_fav_e_book.*
  */
 class FavEBookFragment : Fragment() {
     private lateinit var viewModel : EBookViewModel
-    private val eBookListAdapter = EBookListAdapter(arrayListOf())
+    private val eBookListAdapter = EBookListAdapter(arrayListOf(), "fav")
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -41,7 +41,7 @@ class FavEBookFragment : Fragment() {
 
         observeViewModel()
 
-        refreshLayout.setOnRefreshListener {
+        refreshLayoutt.setOnRefreshListener {
             recVieww.visibility = View.GONE
             txtErrorr.visibility = View.GONE
             progressLoadd.visibility = View.VISIBLE

@@ -32,7 +32,11 @@
         android:id="@+id/itemFav"
         android:name="id.web.rpgfantasy.a160419097_hizkia.view.FavEBookFragment"
         android:label="fragment_fav_e_book"
-        tools:layout="@layout/fragment_fav_e_book" />
+        tools:layout="@layout/fragment_fav_e_book" >
+        <action
+            android:id="@+id/action_itemFav_to_EBookDetailFragment"
+            app:destination="@id/EBookDetailFragment" />
+    </fragment>
     <fragment
         android:id="@+id/itemProfile"
         android:name="id.web.rpgfantasy.a160419097_hizkia.view.ProfileFragment"
@@ -73,6 +77,11 @@
             android:id="@+id/action_EBookDetailFragment_to_EBookListFragment"
             app:destination="@id/EBookListFragment"
             app:popUpTo="@id/EBookListFragment" />
+        <action
+            android:id="@+id/action_EBookDetailFragment_to_itemFav"
+            app:destination="@id/itemFav"
+            app:popUpTo="@id/EBookDetailFragment"
+            app:popUpToInclusive="true" />
     </fragment>
     <fragment
         android:id="@+id/aboutEBookFragment"

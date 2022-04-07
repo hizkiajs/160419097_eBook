@@ -18,7 +18,7 @@ import kotlinx.android.synthetic.main.fragment_e_book_list.*
  */
 class EBookListFragment : Fragment() {
     private lateinit var viewModel : EBookViewModel
-    private val eBookListAdapter = EBookListAdapter(arrayListOf())
+    private val eBookListAdapter = EBookListAdapter(arrayListOf(), "eBooklist")
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
