@@ -24,7 +24,7 @@ class DetailViewModel(application: Application) :AndroidViewModel(application) {
 
     fun fetch(id: String) {
         queue = Volley.newRequestQueue(getApplication())
-        var url = "https://gist.githubusercontent.com/hizkiajs/510dfb99e307ec5bf1cdfc5c5923d032/raw/ba572f14b082ec4287fa3fd030daf110f4ffb02a/ebook.json"
+        var url = "https://gist.githubusercontent.com/hizkiajs/510dfb99e307ec5bf1cdfc5c5923d032/raw/10d7d4e71a61eb137740390e9b7241e1ad0fce16/ebook.json"
 
         val stringRequest = StringRequest(
             Request.Method.GET, url,
