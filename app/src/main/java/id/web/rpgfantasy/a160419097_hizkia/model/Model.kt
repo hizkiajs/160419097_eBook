@@ -7,8 +7,6 @@ import androidx.room.PrimaryKey
 
 @Entity
 data class Profile(
-    @ColumnInfo(name = "id")
-    var id: String?,
     @ColumnInfo(name = "nama")
     var nama: String?,
     @ColumnInfo(name = "tanggalLahir")
@@ -20,12 +18,13 @@ data class Profile(
     @ColumnInfo(name = "noHP")
     var noHP: String?,
     @ColumnInfo(name = "photo")
-    var photo: String?)
+    var photo: String?){
+    @PrimaryKey(autoGenerate = true)
+    var id:Int =0
+}
 
 @Entity
 data class EBook(
-    @ColumnInfo(name = "id")
-    var id: String?,
     @ColumnInfo(name = "nama")
     var nama: String?,
     @ColumnInfo(name = "editor")
@@ -41,4 +40,17 @@ data class EBook(
     @ColumnInfo(name = "review")
     var review: String?,
     @ColumnInfo(name = "photo")
-    var photo: String?)
+    var photo: String?,
+    @ColumnInfo(name = "category_id")
+    var category_id: Int?,
+    ){
+    @PrimaryKey(autoGenerate = true)
+    var id:Int =0
+}
+@Entity
+data class Category(
+    @ColumnInfo(name = "nama")
+    var nama: String?){
+    @PrimaryKey(autoGenerate = true)
+    var id:Int =0
+}
