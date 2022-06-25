@@ -12,49 +12,30 @@ import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import id.web.rpgfantasy.a160419097_hizkia.model.EBook
 import id.web.rpgfantasy.a160419097_hizkia.model.Profile
+import id.web.rpgfantasy.a160419097_hizkia.util.buildDb
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.Job
+import kotlinx.coroutines.launch
+import kotlin.coroutines.CoroutineContext
 
-class EBookViewModel(application: Application) :AndroidViewModel(application) {
-    val eBooksLiveData = MutableLiveData<ArrayList<EBook>>()
+class EBookViewModel(application: Application) :AndroidViewModel(application), CoroutineScope {
+    val eBooksLiveData = MutableLiveData<List<EBook>>()
     val eBooksLoadErrorLiveData = MutableLiveData<Boolean>()
     val loadingLiveData = MutableLiveData<Boolean>()
-
-    val TAG = "volleyTag"
-    private var queue: RequestQueue? = null
+    private var job = Job()
 
     fun refresh(){
-        /*studentsLiveData.value = arrayListOf(
-            Student("16055","Nonie","1998/03/28","5718444778","http://dummyimage.com/75x100.jpg/cc0000/ffffff"),
-            Student("13312","Rich","1994/12/14","3925444073","http://dummyimage.com/75x100.jpg/5fa2dd/ffffff"),
-            Student("11204","Dinny","1994/10/07","6827808747","http://dummyimage.com/75x100.jpg/5fa2dd/ffffff1")
-        )*/
         eBooksLoadErrorLiveData.value = false
         loadingLiveData.value = true
-
-        queue = Volley.newRequestQueue(getApplication())
-        var url = "https://gist.githubusercontent.com/hizkiajs/510dfb99e307ec5bf1cdfc5c5923d032/raw/10d7d4e71a61eb137740390e9b7241e1ad0fce16/ebook.json"
-
-        val stringRequest = StringRequest(
-            Request.Method.GET, url,
-            { response ->
-                val sType = object : TypeToken<ArrayList<EBook>>() { }.type
-                val result = Gson().fromJson<ArrayList<EBook>>(response, sType)
-                eBooksLiveData.value = result
-                loadingLiveData.value = false
-                Log.d("showvolley", response.toString())
-            },
-            {
-                loadingLiveData.value = false
-                eBooksLoadErrorLiveData.value = true
-                Log.d("errorvolley", it.toString())
-            }
-        ).apply {
-            tag = "TAG"
+        launch {
+            //val db = Room.databaseBuilder(getApplication(),TodoDatabase::class.java,"newtododb").build()
+            val db = buildDb(getApplication())
+            eBooksLiveData.value = db.eBookDao().selectAllEbook()
         }
-        queue?.add(stringRequest)
     }
 
-    override fun onCleared() {
-        super.onCleared()
-        queue?.cancelAll(TAG)
-    }
+
+    override val coroutineContext: CoroutineContext
+        get() = job + Dispatchers.Main
 }

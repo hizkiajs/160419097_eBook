@@ -11,9 +11,14 @@ import com.android.volley.toolbox.Volley
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import id.web.rpgfantasy.a160419097_hizkia.model.Profile
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.Job
+import kotlin.coroutines.CoroutineContext
 
-class ProfileViewModel(application: Application) :AndroidViewModel(application) {
+class ProfileViewModel(application: Application) :AndroidViewModel(application),CoroutineScope {
     val profileLiveData = MutableLiveData<Profile>()
+    private var job = Job()
 
     /*fun fetch() {
         studentLiveData.value = Student("16055","Nonie","1998/03/28","5718444778","http://dummyimage.com/75x100.jpg/cc0000/ffffff")
@@ -46,4 +51,7 @@ class ProfileViewModel(application: Application) :AndroidViewModel(application) 
         super.onCleared()
         queue?.cancelAll(TAG)
     }
+
+    override val coroutineContext: CoroutineContext
+        get() = job + Dispatchers.Main
 }
