@@ -40,7 +40,7 @@
         app:layout_constraintTop_toBottomOf="@+id/txtJudul" />
 
     <TextView
-        android:id="@+id/txtEditor"
+        android:id="@+id/txtEditEditor"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="24dp"
@@ -56,10 +56,10 @@
         android:layout_marginTop="4dp"
         android:text="First Publish: "
         app:layout_constraintStart_toStartOf="@+id/textView1"
-        app:layout_constraintTop_toBottomOf="@+id/txtEditor" />
+        app:layout_constraintTop_toBottomOf="@+id/txtEditEditor" />
 
     <TextView
-        android:id="@+id/txtPublish"
+        android:id="@+id/txtEditPublish"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="24dp"
@@ -75,10 +75,10 @@
         android:layout_marginTop="4dp"
         android:text="Copyright: ©"
         app:layout_constraintStart_toStartOf="@+id/textView2"
-        app:layout_constraintTop_toBottomOf="@+id/txtPublish" />
+        app:layout_constraintTop_toBottomOf="@+id/txtEditPublish" />
 
     <TextView
-        android:id="@+id/txtCopyright"
+        android:id="@+id/txtEditCopyright"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="24dp"
@@ -92,7 +92,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="4dp"
         android:layout_marginEnd="24dp"
         android:text="About"
         android:textAlignment="center"
@@ -100,7 +100,7 @@
         app:iconGravity="textStart"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtCopyright" />
+        app:layout_constraintTop_toBottomOf="@+id/btnEditEBook" />
 
     <Button
         android:id="@+id/btnAuthor"
@@ -141,5 +141,18 @@
         app:layout_constraintEnd_toEndOf="@+id/imgEBookDetailPhoto"
         app:layout_constraintStart_toStartOf="@+id/imgEBookDetailPhoto"
         app:layout_constraintTop_toTopOf="@+id/imgEBookDetailPhoto" />
+
+    <Button
+        android:id="@+id/btnEditEBook"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="32dp"
+        android:text="Edit EBook"
+        app:icon="@drawable/ic_baseline_edit_24"
+        app:iconGravity="textStart"
+        app:layout_constraintEnd_toEndOf="@+id/btnReviews"
+        app:layout_constraintStart_toStartOf="@+id/btnReviews"
+        app:layout_constraintTop_toBottomOf="@+id/txtEditCopyright" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -37,7 +37,7 @@ class ProfileFragment : Fragment() {
 
     private fun observeViewModel() {
         viewModel.profileLiveData.observe(viewLifecycleOwner){
-            txtNama.setText(it.nama)
+            txtEditNama.setText(it.nama)
             txtNoHP.setText(it.noHP)
             txtEmail.setText(it.email)
             imgProfilePhoto.loadImage(it.photo)

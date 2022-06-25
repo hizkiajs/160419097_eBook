@@ -43,9 +43,9 @@ class EBookDetailFragment : Fragment() {
     private fun observeViewModel() {
         viewModel.eBookDetailLiveData.observe(viewLifecycleOwner){
             txtJudul.setText(it.nama)
-            txtEditor.setText(it.editor)
-            txtPublish.setText(it.publish)
-            txtCopyright.setText(it.copyright)
+            txtEditEditor.setText(it.editor)
+            txtEditPublish.setText(it.publish)
+            txtEditCopyright.setText(it.copyright)
             imgEBookDetailPhoto.loadImage(it.photo, progressLoadingDetailPhoto)
             var ideBook = it.id
             btnAbout.setOnClickListener {
