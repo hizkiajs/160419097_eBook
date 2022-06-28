@@ -19,9 +19,6 @@ interface EBookDao {
     @Delete
     suspend fun deleteEbook(eBook: EBook)
 
-//    @Query("UPDATE Ebook SET nama = :name, editor = :editor, publish = :publish, copyright=:copyright, about=:about, author_bios=:bios, photo=:photo, category_id = :idkategori WHERE id =:idEbook")
-//    suspend fun update(name:String, editor:String,publish:String, copyright:String,about:String,bios:String, review:String, photo:String, idkategori:Int,idEbook:Int )
-
     @Update
     suspend fun updateEbook(eBook: EBook)
 

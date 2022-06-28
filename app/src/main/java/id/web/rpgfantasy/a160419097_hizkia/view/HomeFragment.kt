@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.Navigation
 import id.web.rpgfantasy.a160419097_hizkia.R
+import id.web.rpgfantasy.a160419097_hizkia.model.Category
 import kotlinx.android.synthetic.main.fragment_home.*
 
 /**
@@ -29,5 +30,14 @@ class HomeFragment : Fragment() {
             val action = HomeFragmentDirections.actionItemHomeToEBookListFragment()
             Navigation.findNavController(it).navigate(action)
         }
+        btnAddNewEBook.setOnClickListener {
+            val action = HomeFragmentDirections.actionItemHomeToCreateEBookFragment()
+            Navigation.findNavController(it).navigate(action)
+        }
+        btnAddNewCategory.setOnClickListener {
+            val action = HomeFragmentDirections.actionItemHomeToCreateCategoryFragment()
+            Navigation.findNavController(it).navigate(action)
+        }
     }
+
 }

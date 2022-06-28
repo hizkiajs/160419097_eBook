@@ -13,6 +13,12 @@
         <action
             android:id="@+id/action_itemHome_to_EBookListFragment"
             app:destination="@id/EBookListFragment" />
+        <action
+            android:id="@+id/action_itemHome_to_createCategoryFragment"
+            app:destination="@id/createCategoryFragment" />
+        <action
+            android:id="@+id/action_itemHome_to_createEBookFragment"
+            app:destination="@id/createEBookFragment" />
     </fragment>
     <fragment
         android:id="@+id/EBookListFragment"
@@ -82,6 +88,12 @@
             app:destination="@id/itemFav"
             app:popUpTo="@id/EBookDetailFragment"
             app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_EBookDetailFragment_to_editEBookFragment2"
+            app:destination="@id/editEBookFragment" />
+        <action
+            android:id="@+id/action_EBookDetailFragment_self"
+            app:destination="@id/EBookDetailFragment" />
     </fragment>
     <fragment
         android:id="@+id/aboutEBookFragment"
@@ -121,5 +133,35 @@
         <argument
             android:name="idEBook"
             app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/createCategoryFragment"
+        android:name="id.web.rpgfantasy.a160419097_hizkia.view.CreateCategoryFragment"
+        android:label="fragment_create_category"
+        tools:layout="@layout/fragment_create_category" >
+        <action
+            android:id="@+id/action_createCategoryFragment_to_itemHome"
+            app:destination="@id/itemHome"
+            app:popUpTo="@id/itemHome" />
+    </fragment>
+    <fragment
+        android:id="@+id/createEBookFragment"
+        android:name="id.web.rpgfantasy.a160419097_hizkia.view.CreateEBookFragment"
+        android:label="fragment_create_e_book"
+        tools:layout="@layout/fragment_create_e_book" >
+        <action
+            android:id="@+id/action_createEBookFragment_to_itemHome"
+            app:destination="@id/itemHome"
+            app:popUpTo="@id/itemHome" />
+    </fragment>
+    <fragment
+        android:id="@+id/editEBookFragment"
+        android:name="id.web.rpgfantasy.a160419097_hizkia.view.EditEBookFragment"
+        android:label="fragment_edit_e_book"
+        tools:layout="@layout/fragment_edit_e_book" >
+        <action
+            android:id="@+id/action_editEBookFragment_to_EBookDetailFragment2"
+            app:destination="@id/EBookDetailFragment"
+            app:popUpTo="@id/EBookDetailFragment" />
     </fragment>
 </navigation>

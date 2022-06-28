@@ -55,7 +55,7 @@ class EBookListAdapter(val eBookList:ArrayList<EBook>, val current: String):
     override fun getItemCount() = eBookList.size
 
 
-    fun updateeBookList(neweBookList : ArrayList<EBook>){
+    fun updateeBookList(neweBookList : List<EBook>){
         eBookList.clear()
         eBookList.addAll(neweBookList)
         notifyDataSetChanged()
