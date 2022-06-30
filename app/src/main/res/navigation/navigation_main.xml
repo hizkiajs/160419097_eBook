@@ -163,5 +163,8 @@
             android:id="@+id/action_editEBookFragment_to_EBookDetailFragment2"
             app:destination="@id/EBookDetailFragment"
             app:popUpTo="@id/EBookDetailFragment" />
+        <argument
+            android:name="idEBook"
+            app:argType="string" />
     </fragment>
 </navigation>
