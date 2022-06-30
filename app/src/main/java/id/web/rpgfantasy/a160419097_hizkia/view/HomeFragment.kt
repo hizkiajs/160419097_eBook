@@ -38,6 +38,10 @@ class HomeFragment : Fragment() {
             val action = HomeFragmentDirections.actionItemHomeToCreateCategoryFragment()
             Navigation.findNavController(it).navigate(action)
         }
+        btnAddNewProfile.setOnClickListener{
+            val action = HomeFragmentDirections.actionItemHomeToCreateProfileFragment()
+            Navigation.findNavController(it).navigate(action)
+        }
     }
 
 }

@@ -10,21 +10,22 @@ interface CategorySaveListener{
     fun onSaveCategoryClicked(view:View, obj: Category)
 }
 interface EbookSaveListener{
-    fun OnSaveEbookClicked(view:View, obj:EBook)
+    fun onSaveEbookClicked(view:View, obj:EBook)
+
 }
 interface ProfileSaveListener{
-    fun OnSaveProfileClicked(view:View, obj:Profile)
+    fun onSaveProfileClicked(view:View, obj:Profile)
 }
 
 interface  EbookDeleteListener{
     fun onDeleteEboookClicked(view:View, obj: EBook)
 }
-
-interface EbookEditListener{
-    fun OnEditEbookClicked(view:View, obj:EBook)
+interface EbookEditlistener{
+    fun onEditEbookClicked(view: View, obj:EBook)
 }
+
 interface ProfileEditListener{
-    fun OnEditProfileClicked(view:View, obj:Profile)
+    fun onEditProfileClicked(view:View, obj: Profile)
 }
 
 interface NavigateToListEbookListener{
@@ -46,7 +47,7 @@ interface NavigateToNewProfileListener{
     fun onNavigateToNewProfileListener(view: View)
 }
 interface NavigateToEditEbookListener{
-    fun onNavigateToEditEbookListener(view: View, id: Int)
+    fun onNavigateToEditEbookListener(view: View)
 }
 interface NavigateToAboutListener{
     fun onNavigateToAboutListener(view: View)

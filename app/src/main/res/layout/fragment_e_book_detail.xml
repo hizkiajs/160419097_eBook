@@ -33,10 +33,8 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
             android:layout_marginTop="24dp"
-            android:layout_marginBottom="8dp"
-            android:imageUrl="@{eBook.photo}"
-            android:progressBar="@{progressLoadingDetailPhoto}"
-            app:layout_constraintBottom_toTopOf="@+id/guideline3"
+            imageUrl="@{eBook.photo}"
+            progressBar="@{progressLoadingDetailPhoto}"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:src="@tools:sample/avatars" />
@@ -98,7 +96,6 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
             android:text="Copyright: ©"
-            app:layout_constraintBottom_toTopOf="@+id/guideline3"
             app:layout_constraintStart_toStartOf="@+id/textView2"
             app:layout_constraintTop_toBottomOf="@+id/txtEditPublish" />
 
@@ -121,6 +118,7 @@
             android:layout_marginEnd="24dp"
             android:text="About"
             android:textAlignment="center"
+            android:tag = "@{eBook.id}"
             android:onClick="@{(view)->navigateToAboutListener.onNavigateToAboutListener(view)}"
             app:icon="@drawable/ic_baseline_error_outline_24"
             app:iconGravity="textStart"
@@ -136,7 +134,8 @@
             android:layout_marginTop="4dp"
             android:layout_marginEnd="24dp"
             android:text="Author"
-            android:imageUrl="@{(view)->navigateToAuthorListener.onNavigateToAuthorListener(view)}"
+            android:tag = "@{eBook.id}"
+            android:onClick="@{(view)->navigateToAuthorListener.onNavigateToAuthorListener(view)}"
             app:icon="@drawable/ic_baseline_person_24"
             app:iconGravity="textStart"
             app:layout_constraintEnd_toEndOf="parent"
@@ -152,6 +151,7 @@
             android:layout_marginTop="4dp"
             android:layout_marginEnd="24dp"
             android:text="Reviews"
+            android:tag = "@{eBook.id}"
             android:onClick="@{(view)->navigateToReviewsListener.onNavigateToReviewsListener(view)}"
             app:icon="@drawable/ic_baseline_sticky_note_2_24"
             app:iconGravity="textStart"
@@ -175,23 +175,15 @@
             style="@style/Widget.MaterialComponents.Button.OutlinedButton"
             android:layout_width="0dp"
             android:layout_height="48dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="64dp"
+            android:tag = "@{eBook.id}"
+            android:onClick="@{(view)->navigateToEditEbookListener.onNavigateToEditEbookListener(view)}"
             android:text="Edit EBook"
-            android:onClick="@{(view)->navigateToEditEbookListener.onNavigateToEditEbookListener(view, eBook.id)}"
             app:icon="@drawable/ic_baseline_edit_24"
             app:iconGravity="textStart"
             app:layout_constraintEnd_toEndOf="@+id/btnReviews"
             app:layout_constraintStart_toStartOf="@+id/btnReviews"
-            app:layout_constraintTop_toTopOf="@+id/guideline3" />
-
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintGuide_begin="165dp"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/txtEditCopyright" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

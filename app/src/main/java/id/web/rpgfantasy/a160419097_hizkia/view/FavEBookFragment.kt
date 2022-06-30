@@ -55,8 +55,7 @@ class FavEBookFragment : Fragment() {
     private fun observeViewModel() {
         viewModel.eBooksLiveData.observe(viewLifecycleOwner){
             var arr: ArrayList<EBook> = arrayListOf()
-            arr.add(it[2])
-            arr.add(it[4])
+            arr.add(it[0])
             eBookListAdapter.updateeBookList(arr)
         }
         viewModel.eBooksLoadErrorLiveData.observe(viewLifecycleOwner){
@@ -68,11 +67,11 @@ class FavEBookFragment : Fragment() {
         }
         viewModel.loadingLiveData.observe(viewLifecycleOwner){
             if(it){
-                recVieww.visibility = View.GONE
-                progressLoadd.visibility = View.VISIBLE
-            } else{
                 recVieww.visibility = View.VISIBLE
                 progressLoadd.visibility = View.GONE
+            } else{
+                recVieww.visibility = View.GONE
+                progressLoadd.visibility = View.VISIBLE
             }
         }
     }

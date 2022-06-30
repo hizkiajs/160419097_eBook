@@ -27,10 +27,10 @@ class ProfileViewModel(application: Application) :AndroidViewModel(application),
         studentLiveData.value = Student("16055","Nonie","1998/03/28","5718444778","http://dummyimage.com/75x100.jpg/cc0000/ffffff")
     }*/
 
-    fun fetch(id: String) {
+    fun fetch(id: Int) {
        launch {
            val db = buildDb(getApplication())
-           profileLiveData.value = db.profileDao().selectProfileById(id.toInt())
+           profileLiveData.value = db.profileDao().selectProfileById(id)
        }
     }
 

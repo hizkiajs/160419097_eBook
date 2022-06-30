@@ -7,8 +7,8 @@ interface ProfileDao{
     @Query("SELECT * FROM Profile")
     suspend fun selectProfile():List<Profile>
 
-    @Query("SELECT * FROM Profile WHERE id = :idProfile")
-    suspend fun selectProfileById(idProfile: Int): Profile
+    @Query("SELECT * FROM Profile WHERE id = :id")
+    suspend fun selectProfileById(id:Int):Profile
 
     @Delete
     suspend fun deleteProfile(profile: Profile)

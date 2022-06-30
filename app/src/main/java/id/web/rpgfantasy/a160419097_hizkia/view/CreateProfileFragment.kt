@@ -48,7 +48,7 @@ class CreateProfileFragment : Fragment(), ProfileSaveListener {
 
     }
 
-    override fun OnSaveProfileClicked(view: View, obj: Profile) {
+    override fun onSaveProfileClicked(view: View, obj: Profile) {
         val list = listOf(obj)
         viewModel.addProfile(list)
     }

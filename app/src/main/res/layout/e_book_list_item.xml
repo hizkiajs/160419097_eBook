@@ -45,8 +45,8 @@
                     android:layout_width="125dp"
                     android:layout_height="wrap_content"
                     android:scaleType="centerCrop"
-                    android:imageUrl="@{eeBookk.photo}"
-                    android:progressBar="@{progressLoadingeBookPhoto}"
+                    imageUrl="@{eeBookk.photo}"
+                    progressBar="@{progressLoadingeBookPhoto}"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     tools:src="@tools:sample/avatars" />

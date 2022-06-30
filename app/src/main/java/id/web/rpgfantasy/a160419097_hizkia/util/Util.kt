@@ -14,12 +14,12 @@ import java.lang.Exception
 import androidx.room.migration.Migration
 import androidx.sqlite.db.SupportSQLiteDatabase
 
-@BindingAdapter("android:imageUrl","android:progressBar")
+@BindingAdapter("imageUrl","progressBar")
 fun loadImageFromUrl(view: ImageView, url: String?, pb: ProgressBar) {
     view.loadImage(url, pb)
 }
 
-@BindingAdapter("android:imageUrl")
+@BindingAdapter("imageUrl")
 fun loadImageFromUrl(view: ImageView, url: String?) {
     view.loadImage(url.toString())
 }

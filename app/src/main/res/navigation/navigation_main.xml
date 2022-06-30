@@ -19,6 +19,9 @@
         <action
             android:id="@+id/action_itemHome_to_createEBookFragment"
             app:destination="@id/createEBookFragment" />
+        <action
+            android:id="@+id/action_itemHome_to_createProfileFragment"
+            app:destination="@id/createProfileFragment" />
     </fragment>
     <fragment
         android:id="@+id/EBookListFragment"
@@ -61,6 +64,9 @@
             android:id="@+id/action_profileDetailFragment_to_itemProfile"
             app:destination="@id/itemProfile"
             app:popUpTo="@id/itemProfile" />
+        <argument
+            android:name="idprofile"
+            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/EBookDetailFragment"
@@ -166,5 +172,14 @@
         <argument
             android:name="idEBook"
             app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/createProfileFragment"
+        android:name="id.web.rpgfantasy.a160419097_hizkia.view.CreateProfileFragment"
+        android:label="CreateProfileFragment" >
+        <action
+            android:id="@+id/action_createProfileFragment_to_itemHome"
+            app:destination="@id/itemHome"
+            app:popUpTo="@id/itemHome" />
     </fragment>
 </navigation>

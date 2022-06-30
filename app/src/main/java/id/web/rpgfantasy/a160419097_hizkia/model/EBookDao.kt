@@ -7,7 +7,7 @@ interface EBookDao {
     @Query("SELECT * FROM Ebook Where deleted = 0")
     suspend fun selectAllEbook():List<EBook>
 
-    @Query("SELECT * FROM Ebook WHERE id = :id")
+    @Query("SELECT * FROM EBook WHERE id = :id")
     suspend fun selectEbookById(id:Int):EBook
 
     @Query("SELECT * FROM Ebook WHERE category_id = :id")

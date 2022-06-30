@@ -8,8 +8,8 @@
             name="eBook"
             type="id.web.rpgfantasy.a160419097_hizkia.model.EBook" />
         <variable
-            name="editEbookListener"
-            type="id.web.rpgfantasy.a160419097_hizkia.view.EbookEditListener" />
+            name="eBookEditListener"
+            type="id.web.rpgfantasy.a160419097_hizkia.view.EbookEditlistener" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -119,7 +119,7 @@
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/txtEditCopyright"
-                        android:text="@={eBook.publish}"
+                        android:text="@={eBook.copyright}"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content" />
                 </com.google.android.material.textfield.TextInputLayout>
@@ -234,16 +234,13 @@
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <Button
-                    android:id="@+id/btnEdit"
+                    android:id="@+id/buttonEditEBook"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
                     android:layout_marginTop="8dp"
-                    android:layout_marginEnd="16dp"
-                    android:text="Save Change"
-                    android:tag="@{eBook.id}"
-                    android:onClick="@{(view)->editEbookListener.OnEditEbookClicked(view,eBook)}"
-                    app:layout_constraintEnd_toEndOf="parent"
+                    android:text="Save Changes"
+                    android:onClick="@{(view)->eBookEditListener.onEditEbookClicked(view,eBook)}"
+                    app:layout_constraintEnd_toEndOf="@+id/textInputLayout24"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textInputLayout24" />
 

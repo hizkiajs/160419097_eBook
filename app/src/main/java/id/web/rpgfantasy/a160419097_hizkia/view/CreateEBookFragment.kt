@@ -51,10 +51,12 @@ class CreateEBookFragment : Fragment(),EbookSaveListener {
         dataBinding.ebook = EBook("","","","","","","","",0,0)
         dataBinding.saveEbookListener = this
 
+
     }
 
-    override fun OnSaveEbookClicked(view: View, obj: EBook) {
+    override fun onSaveEbookClicked(view: View, obj: EBook) {
         val list = listOf(obj)
         viewModel.addEbook(list)
     }
+
 }
