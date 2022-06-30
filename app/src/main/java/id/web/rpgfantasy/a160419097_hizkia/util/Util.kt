@@ -14,6 +14,16 @@ import java.lang.Exception
 import androidx.room.migration.Migration
 import androidx.sqlite.db.SupportSQLiteDatabase
 
+@BindingAdapter("android:imageUrl","android:progressBar")
+fun loadImageFromUrl(view: ImageView, url: String?, pb: ProgressBar) {
+    view.loadImage(url, pb)
+}
+
+@BindingAdapter("android:imageUrl")
+fun loadImageFromUrl(view: ImageView, url: String?) {
+    view.loadImage(url.toString())
+}
+
 fun ImageView.loadImage(url: String?, progressBar: ProgressBar) {
     Picasso.get()
         .load(url)

@@ -5,7 +5,7 @@
 
     <data>
         <variable
-            name="eBook"
+            name="eeBookk"
             type="id.web.rpgfantasy.a160419097_hizkia.model.EBook" />
         <variable
             name="deleteEbookListener"
@@ -44,6 +44,8 @@
                     android:layout_width="125dp"
                     android:layout_height="wrap_content"
                     android:scaleType="centerCrop"
+                    android:imageUrl="@{eeBookk.photo}"
+                    android:progressBar="@{progressLoadingeBookPhoto}"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     tools:src="@tools:sample/avatars" />
@@ -53,7 +55,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="4dp"
-                    android:text="@{eBook.id}"
+                    android:text="@{eeBookk.id}"
                     android:textStyle="bold"
                     app:layout_constraintStart_toEndOf="@+id/textView9"
                     app:layout_constraintTop_toTopOf="@+id/textView9" />
@@ -64,7 +66,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:layout_marginEnd="24dp"
-                    android:text="@{eBook.nama}"
+                    android:text="@{eeBookk.nama}"
                     android:textSize="16sp"
                     android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -100,8 +102,8 @@
                     android:layout_marginEnd="8dp"
                     android:layout_marginBottom="8dp"
                     android:text="Delete"
-                    android:tag="@{eBook.id}"
-                    android:onClick="@{(view)->deleteEbookListener.onDeleteEboookClicked(view,eBook)}"
+                    android:tag="@{eeBookk.id}"
+                    android:onClick="@{(view)->deleteEbookListener.onDeleteEboookClicked(view,eeBookk)}"
                     app:icon="@drawable/ic_baseline_delete_24"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent" />

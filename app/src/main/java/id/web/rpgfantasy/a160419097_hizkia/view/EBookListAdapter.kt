@@ -12,7 +12,6 @@ import id.web.rpgfantasy.a160419097_hizkia.databinding.EBookListItemBinding
 
 import id.web.rpgfantasy.a160419097_hizkia.model.EBook
 import id.web.rpgfantasy.a160419097_hizkia.model.EBookDao
-import id.web.rpgfantasy.a160419097_hizkia.util.loadImage
 import kotlinx.android.synthetic.main.e_book_list_item.view.*
 
 class EBookListAdapter(val eBookList:ArrayList<EBook>, val current: String, val adapterOnClick:(EBook) -> Unit):
@@ -29,7 +28,7 @@ class EBookListAdapter(val eBookList:ArrayList<EBook>, val current: String, val 
 
     override fun onBindViewHolder(holder: EBookViewHolder, position: Int) {
         val eBook = eBookList[position]
-        holder.view.eBook = eBook
+        holder.view.eeBookk = eBook
         /*with(holder.view){
             txtIDEBookList.text = eBook.id.toString()
             txtNameEBookList.text = eBook.nama.toString()
