@@ -55,8 +55,15 @@ fun ImageView.loadImage(url: String) {
 val DB_NAME = "ELibDatabase"
 fun buildDb(context: Context):ELibDatabase{
     val db = Room.databaseBuilder(context,ELibDatabase::class.java, DB_NAME)
-        .addMigrations()
+        .addMigrations(MIGRATION_1_2)
         .build()
     return db
+}
+
+val MIGRATION_1_2= object  :Migration(1,2) {
+    override fun migrate(database: SupportSQLiteDatabase) {
+        database.execSQL("ALTER TABLE EBook ADD COLUMN deleted INTEGER DEFAULT 0 not null")
+    }
+
 }
 

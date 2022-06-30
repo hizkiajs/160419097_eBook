@@ -43,9 +43,8 @@ data class EBook(
     var photo: String?,
     @ColumnInfo(name = "category_id")
     var category_id: Int?,
-    @ColumnInfo(name="deleted")
-    var deleted: Int = 0
-    ){
+    @ColumnInfo(name = "deleted")
+    var deleted:Int =0) {
     @PrimaryKey(autoGenerate = true)
     var id:Int =0
 }

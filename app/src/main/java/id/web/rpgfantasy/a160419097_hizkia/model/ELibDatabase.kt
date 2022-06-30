@@ -6,7 +6,7 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 
 
-@Database(entities = [Profile::class,Category::class, EBook::class], version = 1)
+@Database(entities = [Profile::class,Category::class, EBook::class], version = 2)
 abstract class ELibDatabase:RoomDatabase() {
     abstract fun eBookDao():EBookDao
     abstract fun profileDao():ProfileDao

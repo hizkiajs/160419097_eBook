@@ -43,12 +43,12 @@ class DetailViewModel(application: Application) :AndroidViewModel(application),C
             db.eBookDao().updateEbook(eBook)
         }
     }
-    fun delete(id:String){
-        launch {
-            val db = buildDb(getApplication())
-            db.eBookDao().safeDeleteEbook(id.toInt())
-        }
-    }
+//    fun delete(id:String){
+//        launch {
+//            val db = buildDb(getApplication())
+//            //db.eBookDao().safeDeleteEbook(id.toInt())
+//        }
+//    }
 
 
     override val coroutineContext: CoroutineContext

@@ -4,7 +4,7 @@ import androidx.room.*
 
 @Dao
 interface EBookDao {
-    @Query("SELECT * FROM Ebook Where deleted = 0")
+    @Query("SELECT * FROM Ebook WHERE deleted = 0")
     suspend fun selectAllEbook():List<EBook>
 
     @Query("SELECT * FROM EBook WHERE id = :id")
