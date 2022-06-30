@@ -10,6 +10,7 @@ import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
+import id.web.rpgfantasy.a160419097_hizkia.model.Category
 import id.web.rpgfantasy.a160419097_hizkia.model.EBook
 import id.web.rpgfantasy.a160419097_hizkia.util.buildDb
 import kotlinx.coroutines.CoroutineScope
@@ -27,6 +28,13 @@ class DetailViewModel(application: Application) :AndroidViewModel(application),C
             //val db = Room.databaseBuilder(getApplication(),TodoDatabase::class.java,"newtododb").build()
             val db = buildDb(getApplication())
             eBookDetailLiveData.value = db.eBookDao().selectEbookById(id.toInt())
+        }
+    }
+    fun addEbook(ebookList: List<EBook>){
+        launch {
+            //val db = Room.databaseBuilder(getApplication(), TodoDatabase::class.java,"newtododb").build()
+            val db = buildDb(getApplication())
+            db.eBookDao().insertAll(*ebookList.toTypedArray())
         }
     }
     fun update(eBook: EBook){

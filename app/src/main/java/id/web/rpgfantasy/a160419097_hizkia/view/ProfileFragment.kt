@@ -40,7 +40,7 @@ class ProfileFragment : Fragment() {
             txtEditNama.setText(it.nama)
             txtNoHP.setText(it.noHP)
             txtEmail.setText(it.email)
-            imgProfilePhoto.loadImage(it.photo)
+            imgProfilePhoto.loadImage(it.photo.toString())
             btnDetailProfile.setOnClickListener {
                 val action = ProfileFragmentDirections.actionProfileFragmentToProfileDetailFragment()
                 Navigation.findNavController(it).navigate(action)

@@ -43,7 +43,7 @@ class ReviewEBookFragment : Fragment() {
     private fun observeViewModel() {
         viewModel.eBookDetailLiveData.observe(viewLifecycleOwner){
             txtContentReview.setText(it.review)
-            imgEBookReviewPhoto.loadImage(it.photo)
+            imgEBookReviewPhoto.loadImage(it.photo.toString())
         }
     }
 }

@@ -44,7 +44,7 @@ class AboutEBookFragment : Fragment() {
     private fun observeViewModel() {
         viewModel.eBookDetailLiveData.observe(viewLifecycleOwner){
             txtAboutEBook.setText(it.about)
-            imgEBookAboutPhoto.loadImage(it.photo)
+            imgEBookAboutPhoto.loadImage(it.photo.toString())
         }
     }
 }

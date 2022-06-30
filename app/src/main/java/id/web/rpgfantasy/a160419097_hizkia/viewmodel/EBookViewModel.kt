@@ -29,8 +29,14 @@ class EBookViewModel(application: Application) :AndroidViewModel(application), C
         eBooksLoadErrorLiveData.value = false
         loadingLiveData.value = true
         launch {
-            //val db = Room.databaseBuilder(getApplication(),TodoDatabase::class.java,"newtododb").build()
             val db = buildDb(getApplication())
+            eBooksLiveData.value = db.eBookDao().selectAllEbook()
+        }
+    }
+    fun clearEbook(eBook:EBook){
+        launch {
+            val db = buildDb(getApplication())
+            db.eBookDao().safeDeleteEbook(eBook.id)
             eBooksLiveData.value = db.eBookDao().selectAllEbook()
         }
     }

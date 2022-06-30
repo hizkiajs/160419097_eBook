@@ -1,6 +1,7 @@
 package id.web.rpgfantasy.a160419097_hizkia.view
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -18,7 +19,9 @@ import kotlinx.android.synthetic.main.fragment_e_book_list.*
  */
 class EBookListFragment : Fragment() {
     private lateinit var viewModel : EBookViewModel
-    private val eBookListAdapter = EBookListAdapter(arrayListOf(), "eBooklist")
+    private val eBookListAdapter = EBookListAdapter(arrayListOf(), "eBooklist"){
+        viewModel.clearEbook(it)
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -50,7 +53,7 @@ class EBookListFragment : Fragment() {
         viewModel.eBooksLiveData.observe(viewLifecycleOwner){
             eBookListAdapter.updateeBookList(it)
         }
-        viewModel.eBooksLoadErrorLiveData.observe(viewLifecycleOwner){
+        /*viewModel.eBooksLoadErrorLiveData.observe(viewLifecycleOwner){
             if(it == true){
                 txtError.visibility = View.VISIBLE
             }else{
@@ -59,12 +62,14 @@ class EBookListFragment : Fragment() {
         }
         viewModel.loadingLiveData.observe(viewLifecycleOwner){
             if(it){
+                Log.d("loading live data", it.toString())
                 recView.visibility = View.GONE
                 progressLoad.visibility = View.VISIBLE
             } else{
+                Log.d("loading live data", it.toString())
                 recView.visibility = View.VISIBLE
                 progressLoad.visibility = View.GONE
             }
-        }
+        }*/
     }
 }

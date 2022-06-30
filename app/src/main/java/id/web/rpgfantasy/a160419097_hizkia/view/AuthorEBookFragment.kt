@@ -43,7 +43,7 @@ class AuthorEBookFragment : Fragment() {
     private fun observeViewModel() {
         viewModel.eBookDetailLiveData.observe(viewLifecycleOwner){
             txtAuthoBios.setText(it.author_bios)
-            imgEBookAuthorPhoto.loadImage(it.photo)
+            imgEBookAuthorPhoto.loadImage(it.photo.toString())
         }
     }
 }

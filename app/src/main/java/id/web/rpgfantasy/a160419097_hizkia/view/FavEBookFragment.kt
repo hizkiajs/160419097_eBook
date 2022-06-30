@@ -22,7 +22,9 @@ import kotlinx.android.synthetic.main.fragment_fav_e_book.*
  */
 class FavEBookFragment : Fragment() {
     private lateinit var viewModel : EBookViewModel
-    private val eBookListAdapter = EBookListAdapter(arrayListOf(), "fav")
+    private val eBookListAdapter = EBookListAdapter(arrayListOf(), "fav"){
+        viewModel.clearEbook(it)
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

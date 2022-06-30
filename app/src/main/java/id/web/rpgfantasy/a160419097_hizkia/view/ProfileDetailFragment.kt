@@ -42,7 +42,7 @@ class ProfileDetailFragment : Fragment() {
             editJenisKelamin.setText(it.jenisKelamin)
             editEmail.setText(it.email)
             editNoHP.setText(it.noHP)
-            imgProfileDetailPhoto.loadImage(it.photo)
+            imgProfileDetailPhoto.loadImage(it.photo.toString())
         }
     }
 }

@@ -4,6 +4,7 @@ import android.content.Context
 import android.view.View
 import android.widget.ImageView
 import android.widget.ProgressBar
+import androidx.databinding.BindingAdapter
 import androidx.room.Room
 import com.squareup.picasso.Callback
 import com.squareup.picasso.Picasso
@@ -28,7 +29,18 @@ fun ImageView.loadImage(url: String?, progressBar: ProgressBar) {
         })
 }
 
-fun ImageView.loadImage(url: String?) {
+
+val DB_NAME = "ELibDatabase"
+fun buildDb(context: Context):ELibDatabase{
+    val db = Room.databaseBuilder(context,ELibDatabase::class.java, DB_NAME)
+        .addMigrations()
+        .build()
+    return db
+}
+
+
+
+fun ImageView.loadImage(url: String) {
     Picasso.get()
         .load(url)
         .resize(400, 400)
@@ -39,13 +51,5 @@ fun ImageView.loadImage(url: String?) {
 
             override fun onError(e: Exception?) { }
         })
-}
-
-val DB_NAME = "ELibDatabase"
-fun buildDb(context: Context):ELibDatabase{
-    val db = Room.databaseBuilder(context,ELibDatabase::class.java, DB_NAME)
-        .addMigrations()
-        .build()
-    return db
 }
 

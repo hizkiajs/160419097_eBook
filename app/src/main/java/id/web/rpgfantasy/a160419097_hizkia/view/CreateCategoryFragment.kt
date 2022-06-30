@@ -52,10 +52,10 @@ class CreateCategoryFragment : Fragment(),CategorySaveListener {
     }
 
     override fun onSaveCategoryClicked(view: View, obj: Category) {
-        var cat = Category(txtInputCatName.toString())
-        val list = listOf(cat)
+
+        val list = listOf(obj)
         viewModel.addCategory(list)
-        Toast.makeText(view.context,txtInputCatName.toString(), Toast.LENGTH_LONG).show()
-        Log.d("category",txtInputCatName.toString() );
+        Toast.makeText(view.context,obj.nama, Toast.LENGTH_LONG).show()
+        Log.d("category",obj.nama.toString() );
     }
 }
