@@ -21,7 +21,7 @@ import kotlinx.android.synthetic.main.fragment_e_book_detail.*
  * Use the [EBookDetailFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class EBookDetailFragment : Fragment(),NavigateToEditEbookListener{
+class EBookDetailFragment : Fragment(),NavigateToEditEbookListener, NavigateToAboutListener, NavigateToAuthorListener, NavigateToReviewsListener{
     private lateinit var viewModel : DetailViewModel
     private lateinit var dataBinding :FragmentEBookDetailBinding
     override fun onCreateView(
@@ -40,7 +40,11 @@ class EBookDetailFragment : Fragment(),NavigateToEditEbookListener{
         arguments?.let {
             id = EBookDetailFragmentArgs.fromBundle(requireArguments()).idEBook
         }
-        dataBinding.navigateToEditEbookListener= this
+        dataBinding.navigateToEditEbookListener = this
+        dataBinding.navigateToAboutListener = this
+        dataBinding.navigateToAuthorListener = this
+        dataBinding.navigateToReviewsListener = this
+
         viewModel = ViewModelProvider(this).get(DetailViewModel::class.java)
         viewModel.fetch(id)
 
@@ -76,6 +80,24 @@ class EBookDetailFragment : Fragment(),NavigateToEditEbookListener{
     override fun onNavigateToEditEbookListener(view: View) {
         var id = view.tag
         var action: NavDirections = EBookDetailFragmentDirections.actionEBookDetailFragmentToEditEBookFragment2(id.toString())
+        Navigation.findNavController(view).navigate(action)
+    }
+
+    override fun onNavigateToAboutListener(view: View) {
+        var id = view.tag
+        var action: NavDirections = EBookDetailFragmentDirections.actionEBookDetailFragmentToAboutEBookFragment(id.toString())
+        Navigation.findNavController(view).navigate(action)
+    }
+
+    override fun onNavigateToAuthorListener(view: View) {
+        var id = view.tag
+        var action: NavDirections = EBookDetailFragmentDirections.actionEBookDetailFragmentToAuthorEBookFragment(id.toString())
+        Navigation.findNavController(view).navigate(action)
+    }
+
+    override fun onNavigateToReviewsListener(view: View) {
+        var id = view.tag
+        var action: NavDirections = EBookDetailFragmentDirections.actionEBookDetailFragmentToReviewEBookFragment(id.toString())
         Navigation.findNavController(view).navigate(action)
     }
 }

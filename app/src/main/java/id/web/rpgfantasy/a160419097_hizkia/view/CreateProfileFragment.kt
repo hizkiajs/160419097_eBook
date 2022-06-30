@@ -5,8 +5,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.Navigation
 import id.web.rpgfantasy.a160419097_hizkia.R
 import id.web.rpgfantasy.a160419097_hizkia.databinding.FragmentCreateEBookBinding
 import id.web.rpgfantasy.a160419097_hizkia.databinding.FragmentCreateProfileBinding
@@ -51,5 +53,7 @@ class CreateProfileFragment : Fragment(), ProfileSaveListener {
     override fun onSaveProfileClicked(view: View, obj: Profile) {
         val list = listOf(obj)
         viewModel.addProfile(list)
+        Toast.makeText(view.context, "Profile Created.", Toast.LENGTH_SHORT).show()
+        Navigation.findNavController(view).popBackStack()
     }
 }

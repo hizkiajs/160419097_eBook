@@ -39,17 +39,6 @@ fun ImageView.loadImage(url: String?, progressBar: ProgressBar) {
         })
 }
 
-
-val DB_NAME = "ELibDatabase"
-fun buildDb(context: Context):ELibDatabase{
-    val db = Room.databaseBuilder(context,ELibDatabase::class.java, DB_NAME)
-        .addMigrations()
-        .build()
-    return db
-}
-
-
-
 fun ImageView.loadImage(url: String) {
     Picasso.get()
         .load(url)
@@ -61,5 +50,13 @@ fun ImageView.loadImage(url: String) {
 
             override fun onError(e: Exception?) { }
         })
+}
+
+val DB_NAME = "ELibDatabase"
+fun buildDb(context: Context):ELibDatabase{
+    val db = Room.databaseBuilder(context,ELibDatabase::class.java, DB_NAME)
+        .addMigrations()
+        .build()
+    return db
 }
 

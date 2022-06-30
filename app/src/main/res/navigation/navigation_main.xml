@@ -8,8 +8,8 @@
     <fragment
         android:id="@+id/itemHome"
         android:name="id.web.rpgfantasy.a160419097_hizkia.view.HomeFragment"
-        android:label="fragment_home"
-        tools:layout="@layout/fragment_home" >
+        android:label="Home"
+        tools:layout="@layout/fragment_home">
         <action
             android:id="@+id/action_itemHome_to_EBookListFragment"
             app:destination="@id/EBookListFragment" />
@@ -26,8 +26,8 @@
     <fragment
         android:id="@+id/EBookListFragment"
         android:name="id.web.rpgfantasy.a160419097_hizkia.view.EBookListFragment"
-        android:label="fragment_e_book_list"
-        tools:layout="@layout/fragment_e_book_list" >
+        android:label="List EBook"
+        tools:layout="@layout/fragment_e_book_list">
         <action
             android:id="@+id/action_EBookListFragment_to_EBookDetailFragment"
             app:destination="@id/EBookDetailFragment" />
@@ -40,8 +40,8 @@
     <fragment
         android:id="@+id/itemFav"
         android:name="id.web.rpgfantasy.a160419097_hizkia.view.FavEBookFragment"
-        android:label="fragment_fav_e_book"
-        tools:layout="@layout/fragment_fav_e_book" >
+        android:label="Favourite EBook"
+        tools:layout="@layout/fragment_fav_e_book">
         <action
             android:id="@+id/action_itemFav_to_EBookDetailFragment"
             app:destination="@id/EBookDetailFragment" />
@@ -49,8 +49,8 @@
     <fragment
         android:id="@+id/itemProfile"
         android:name="id.web.rpgfantasy.a160419097_hizkia.view.ProfileFragment"
-        android:label="fragment_profile"
-        tools:layout="@layout/fragment_profile" >
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile">
         <action
             android:id="@+id/action_profileFragment_to_profileDetailFragment"
             app:destination="@id/profileDetailFragment" />
@@ -58,8 +58,8 @@
     <fragment
         android:id="@+id/profileDetailFragment"
         android:name="id.web.rpgfantasy.a160419097_hizkia.view.ProfileDetailFragment"
-        android:label="fragment_profile_detail"
-        tools:layout="@layout/fragment_profile_detail" >
+        android:label="Edit Profile"
+        tools:layout="@layout/fragment_profile_detail">
         <action
             android:id="@+id/action_profileDetailFragment_to_itemProfile"
             app:destination="@id/itemProfile"
@@ -71,8 +71,8 @@
     <fragment
         android:id="@+id/EBookDetailFragment"
         android:name="id.web.rpgfantasy.a160419097_hizkia.view.EBookDetailFragment"
-        android:label="fragment_e_book_detail"
-        tools:layout="@layout/fragment_e_book_detail" >
+        android:label="EBook Detail"
+        tools:layout="@layout/fragment_e_book_detail">
         <action
             android:id="@+id/action_EBookDetailFragment_to_aboutEBookFragment"
             app:destination="@id/aboutEBookFragment" />
@@ -104,8 +104,8 @@
     <fragment
         android:id="@+id/aboutEBookFragment"
         android:name="id.web.rpgfantasy.a160419097_hizkia.view.AboutEBookFragment"
-        android:label="fragment_about_e_book"
-        tools:layout="@layout/fragment_about_e_book" >
+        android:label="About EBook"
+        tools:layout="@layout/fragment_about_e_book">
         <action
             android:id="@+id/action_aboutEBookFragment_to_EBookDetailFragment"
             app:destination="@id/EBookDetailFragment"
@@ -117,8 +117,8 @@
     <fragment
         android:id="@+id/authorEBookFragment"
         android:name="id.web.rpgfantasy.a160419097_hizkia.view.AuthorEBookFragment"
-        android:label="fragment_author_e_book"
-        tools:layout="@layout/fragment_author_e_book" >
+        android:label="Author EBook"
+        tools:layout="@layout/fragment_author_e_book">
         <action
             android:id="@+id/action_authorEBookFragment_to_EBookDetailFragment"
             app:destination="@id/EBookDetailFragment"
@@ -130,8 +130,8 @@
     <fragment
         android:id="@+id/reviewEBookFragment"
         android:name="id.web.rpgfantasy.a160419097_hizkia.view.ReviewEBookFragment"
-        android:label="fragment_review_e_book"
-        tools:layout="@layout/fragment_review_e_book" >
+        android:label="Review EBook"
+        tools:layout="@layout/fragment_review_e_book">
         <action
             android:id="@+id/action_reviewEBookFragment_to_EBookDetailFragment"
             app:destination="@id/EBookDetailFragment"
@@ -143,8 +143,8 @@
     <fragment
         android:id="@+id/createCategoryFragment"
         android:name="id.web.rpgfantasy.a160419097_hizkia.view.CreateCategoryFragment"
-        android:label="fragment_create_category"
-        tools:layout="@layout/fragment_create_category" >
+        android:label="Create New Category"
+        tools:layout="@layout/fragment_create_category">
         <action
             android:id="@+id/action_createCategoryFragment_to_itemHome"
             app:destination="@id/itemHome"
@@ -153,8 +153,8 @@
     <fragment
         android:id="@+id/createEBookFragment"
         android:name="id.web.rpgfantasy.a160419097_hizkia.view.CreateEBookFragment"
-        android:label="fragment_create_e_book"
-        tools:layout="@layout/fragment_create_e_book" >
+        android:label="Create New EBook"
+        tools:layout="@layout/fragment_create_e_book">
         <action
             android:id="@+id/action_createEBookFragment_to_itemHome"
             app:destination="@id/itemHome"
@@ -163,8 +163,8 @@
     <fragment
         android:id="@+id/editEBookFragment"
         android:name="id.web.rpgfantasy.a160419097_hizkia.view.EditEBookFragment"
-        android:label="fragment_edit_e_book"
-        tools:layout="@layout/fragment_edit_e_book" >
+        android:label="Edit EBook"
+        tools:layout="@layout/fragment_edit_e_book">
         <action
             android:id="@+id/action_editEBookFragment_to_EBookDetailFragment2"
             app:destination="@id/EBookDetailFragment"
@@ -176,7 +176,7 @@
     <fragment
         android:id="@+id/createProfileFragment"
         android:name="id.web.rpgfantasy.a160419097_hizkia.view.CreateProfileFragment"
-        android:label="CreateProfileFragment" >
+        android:label="Create New Profile">
         <action
             android:id="@+id/action_createProfileFragment_to_itemHome"
             app:destination="@id/itemHome"

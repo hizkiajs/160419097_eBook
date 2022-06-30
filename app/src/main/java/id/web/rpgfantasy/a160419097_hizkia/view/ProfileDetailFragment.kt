@@ -54,19 +54,18 @@ class ProfileDetailFragment : Fragment(),ProfileEditListener {
     private fun observeViewModel() {
         viewModel.profileLiveData.observe(viewLifecycleOwner){
             dataBinding.pfp=it
-//            editNama.setText(it.nama)
-//            editTanggalLahir.setText(it.tanggalLahir)
-//            editJenisKelamin.setText(it.jenisKelamin)
-//            editEmail.setText(it.email)
-//            editNoHP.setText(it.noHP)
-//            txtIDProfileDetail.text = it.id.toString()
-//            imgProfileDetailPhoto.loadImage(it.photo.toString())
+            /*editNama.setText(it.nama)
+            editTanggalLahir.setText(it.tanggalLahir)
+            editJenisKelamin.setText(it.jenisKelamin)
+            editEmail.setText(it.email)
+            editNoHP.setText(it.noHP)
+            txtIDProfileDetail.text = it.id.toString()
+            imgProfileDetailPhoto.loadImage(it.photo.toString())*/
         }
     }
 
 
     override fun onEditProfileClicked(view: View, obj: Profile) {
-
         obj?.let{
             viewModel.update(obj)
             Toast.makeText(view.context, "Profile Updated.", Toast.LENGTH_SHORT).show()

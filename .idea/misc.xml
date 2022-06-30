@@ -3,6 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/ANMP/anstud/160419097_eBook/app/src/main/res/layout/fragment_about_e_book.xml" value="0.14130434782608695" />
+        <entry key="..\:/ANMP/anstud/160419097_eBook/app/src/main/res/layout/fragment_create_category.xml" value="0.1" />
+        <entry key="..\:/ANMP/anstud/160419097_eBook/app/src/main/res/layout/fragment_e_book_detail.xml" value="0.14130434782608695" />
+        <entry key="..\:/ANMP/anstud/160419097_eBook/app/src/main/res/layout/fragment_home.xml" value="0.14130434782608695" />
+        <entry key="..\:/ANMP/anstud/160419097_eBook/app/src/main/res/layout/fragment_profile.xml" value="0.1" />
+        <entry key="..\:/ANMP/anstud/160419097_eBook/app/src/main/res/layout/fragment_profile_detail.xml" value="0.14130434782608695" />
         <entry key="..\:/ANMP/anstud/uts/app/src/main/res/layout/activity_main.xml" value="0.22" />
         <entry key="..\:/ANMP/anstud/uts/app/src/main/res/layout/e_book_list_item.xml" value="0.22" />
         <entry key="..\:/ANMP/anstud/uts/app/src/main/res/layout/fragment_about_e_book.xml" value="0.22" />

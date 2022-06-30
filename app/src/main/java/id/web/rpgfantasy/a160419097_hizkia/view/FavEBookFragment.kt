@@ -56,6 +56,7 @@ class FavEBookFragment : Fragment() {
         viewModel.eBooksLiveData.observe(viewLifecycleOwner){
             var arr: ArrayList<EBook> = arrayListOf()
             arr.add(it[0])
+            arr.add(it[2])
             eBookListAdapter.updateeBookList(arr)
         }
         viewModel.eBooksLoadErrorLiveData.observe(viewLifecycleOwner){

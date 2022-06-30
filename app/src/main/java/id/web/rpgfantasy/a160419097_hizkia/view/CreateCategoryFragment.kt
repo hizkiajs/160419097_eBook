@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.Navigation
 import id.web.rpgfantasy.a160419097_hizkia.R
 import id.web.rpgfantasy.a160419097_hizkia.databinding.FragmentCreateCategoryBinding
 import id.web.rpgfantasy.a160419097_hizkia.model.Category
@@ -52,10 +53,10 @@ class CreateCategoryFragment : Fragment(),CategorySaveListener {
     }
 
     override fun onSaveCategoryClicked(view: View, obj: Category) {
-
         val list = listOf(obj)
         viewModel.addCategory(list)
-        Toast.makeText(view.context,obj.nama, Toast.LENGTH_LONG).show()
+        Toast.makeText(view.context, "Category Created.", Toast.LENGTH_SHORT).show()
+        Navigation.findNavController(view).popBackStack()
         Log.d("category",obj.nama.toString() );
     }
 }

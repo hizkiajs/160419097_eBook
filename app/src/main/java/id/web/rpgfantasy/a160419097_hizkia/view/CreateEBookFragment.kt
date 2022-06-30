@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.Navigation
 import id.web.rpgfantasy.a160419097_hizkia.R
 import id.web.rpgfantasy.a160419097_hizkia.databinding.FragmentCreateCategoryBinding
 import id.web.rpgfantasy.a160419097_hizkia.databinding.FragmentCreateEBookBinding
@@ -57,6 +58,8 @@ class CreateEBookFragment : Fragment(),EbookSaveListener {
     override fun onSaveEbookClicked(view: View, obj: EBook) {
         val list = listOf(obj)
         viewModel.addEbook(list)
+        Toast.makeText(view.context, "EBook Created.", Toast.LENGTH_SHORT).show()
+        Navigation.findNavController(view).popBackStack()
     }
 
 }
