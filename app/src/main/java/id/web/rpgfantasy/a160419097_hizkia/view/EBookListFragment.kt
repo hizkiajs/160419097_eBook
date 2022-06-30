@@ -53,23 +53,25 @@ class EBookListFragment : Fragment() {
         viewModel.eBooksLiveData.observe(viewLifecycleOwner){
             eBookListAdapter.updateeBookList(it)
         }
-        /*viewModel.eBooksLoadErrorLiveData.observe(viewLifecycleOwner){
+        viewModel.eBooksLoadErrorLiveData.observe(viewLifecycleOwner){
             if(it == true){
+                Log.d("Error Live Data", "error")
                 txtError.visibility = View.VISIBLE
             }else{
                 txtError.visibility = View.GONE
+                Log.d("Error Live Data","tidak error")
             }
         }
         viewModel.loadingLiveData.observe(viewLifecycleOwner){
             if(it){
                 Log.d("loading live data", it.toString())
-                recView.visibility = View.GONE
-                progressLoad.visibility = View.VISIBLE
-            } else{
-                Log.d("loading live data", it.toString())
                 recView.visibility = View.VISIBLE
                 progressLoad.visibility = View.GONE
+            } else{
+                Log.d("loading live data", it.toString())
+                recView.visibility = View.GONE
+                progressLoad.visibility = View.VISIBLE
             }
-        }*/
+        }
     }
 }

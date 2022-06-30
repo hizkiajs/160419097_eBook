@@ -29,6 +29,8 @@ class EBookListAdapter(val eBookList:ArrayList<EBook>, val current: String, val 
     override fun onBindViewHolder(holder: EBookViewHolder, position: Int) {
         val eBook = eBookList[position]
         holder.view.eeBookk = eBook
+        holder.view.deleteEbookListener = this
+        holder.view.navigateToDetailListener = this
         /*with(holder.view){
             txtIDEBookList.text = eBook.id.toString()
             txtNameEBookList.text = eBook.nama.toString()
@@ -72,7 +74,7 @@ class EBookListAdapter(val eBookList:ArrayList<EBook>, val current: String, val 
     }
 
     override fun onNavigateToDetailEbookListener(view: View) {
-        val id = view.tag.toString().toInt()
+        var id = view.tag
         var action: NavDirections
         if (current == "eBooklist"){
             action = EBookListFragmentDirections.actionEBookListFragmentToEBookDetailFragment(id.toString())
